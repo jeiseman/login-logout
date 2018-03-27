@@ -248,7 +248,9 @@ class WP_Widget_Login_Logout extends WP_Widget {
 }
 
 
-add_action('widgets_init', create_function('', 'return register_widget("WP_Widget_Login_Logout");'));
+add_action('widgets_init', function() {
+    return register_widget("WP_Widget_Login_Logout");
+});
 
 
 if ( ! function_exists( 'login_logout_plugin_load_textdomain' ) ) :
